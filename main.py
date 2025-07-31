@@ -9,7 +9,20 @@ options = [
 
 quitting = False
 
-mainMenu = TerminalMenu(options)
+mainMenu = TerminalMenu(
+    options, 
+    title = "~ Seleccione que quiere hacer ~"
+    )
+
+subMenuBank = TerminalMenu(
+    [
+        "BBVA",
+        "Banamex",
+        "Banregio",
+        "Banorte"
+    ],
+    title = "Escoge el Banco del Estado de Cuenta"
+    )
 
 while quitting == False:
     optionsIndex = mainMenu.show()
@@ -17,5 +30,7 @@ while quitting == False:
 
     if optionsChoice == "Salir":
         quitting = True
+    if optionsChoice == "Convertir Estado de Cuenta PDF a Excel":
+        subMenuBank.show()
     else:
         print(optionsChoice)
