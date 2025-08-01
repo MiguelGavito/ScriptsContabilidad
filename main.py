@@ -41,6 +41,9 @@ while quitting == False:
 
 
     # opciones en el Submenu Convert
+    if optionsChoice == "BBVA":
+        #ejecutar funcion para template BBVA
+        print(optionsChoice)
 
     # opciones en el Submenu Comparar Excels
 
